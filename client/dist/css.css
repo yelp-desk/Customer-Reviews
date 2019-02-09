@@ -1,0 +1,93 @@
+
+.hoverDescription {
+  opacity:0; /* Completely invisible. */
+  transition:0.5s; /* A 1 second transition. */
+}
+.reviewbody:hover > .hoverDescription {
+  opacity: 1;
+} 
+
+.hoverInfo {
+  border-bottom: thin rgb(250, 247, 247);
+  padding-top: 3px;
+  padding-bottom: 3px;
+  font-weight: 600;
+  color: #0073bb;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.hoverInfo:link {
+  color: #0073bb;
+}
+
+.hoverInfo:visited {
+  color: #466995;
+}
+
+.hoverInfo:hover { 
+  text-decoration: underline;
+  color: #0073bb;
+}
+
+.box:before {
+  content: " ";
+  display: table;
+}
+
+.box.after {
+  content: " ";
+  display: table; 
+}
+
+/* Style the search field */
+form.form input[type=text] {
+  padding: 10px;
+  font-size: 15px;
+  border: 1px solid white;
+  float: left;
+  width: 40%;
+  background: #f1f1f1;
+}
+
+/* Style the submit button */
+form.form button {
+  float: left;
+  padding: 10px;
+  background: #d32323;
+  color: white;
+  font-size: 15px;
+  border: 1px solid grey;
+  border-left: none; /* Prevent double borders */
+  cursor: pointer;
+}
+
+form.form button:hover {
+  background: #d43535;
+}
+
+.icon {
+  display:inline-block;
+  vertical-align: middle;
+}
+
+.reviewName {
+  font-size: 17px;
+  color: #0073bb;
+  font-weight: bold;
+}
+
+.line {
+  border-bottom: thin solid #e6e6e6;
+  height: 320px;
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+
+.buttox {
+  height: 12px;
+  width: 12px
+}
+.button {
+  background-color: green;
+}
