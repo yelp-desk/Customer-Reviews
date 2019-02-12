@@ -28,8 +28,8 @@ const postdb = (data, callback)=>{
   });
 }
 
-const putdb = (restaurantId,data,callback)=>{
-  connection.query(`UPDATE reviews SET usefulCount = ?, usefulToggle = ?, usefulColor = ? WHERE id = ${restaurantId}`, Object.values(data), function (error, results, fields) {
+const putdb = (restaurantId, data, name, callback)=>{
+  connection.query(`UPDATE reviews SET usefulCount = ?, usefulToggle = ?, usefulColor = ? WHERE id = ${restaurantId} && name="${name}"`, data, function (error, results, fields) {
     if (error){
       callback(error)
     } else {

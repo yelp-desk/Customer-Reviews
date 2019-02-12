@@ -26,11 +26,10 @@ app.get(`/api/restaurant/:id`, (req,res)=>{
 
 app.put('/api/restaurant/:id',(req,res)=>{
   
-  console.log('useful currently count',req.body)
-  
-  var data = req.body
-  var ok = req.params.id;
-  connect.putdb(ok, data, (error)=>{
+  var name = req.body.name
+  var data = [req.body.usefulCount,req.body.usefulToggle,req.body.usefulColor]
+  var id = req.params.id;
+  connect.putdb(id, data, name, (error)=>{
     if (error){
       res.status(400).send();
     }

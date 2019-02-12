@@ -1,13 +1,17 @@
-
-.hoverDescription {
-  opacity:0; /* Completely invisible. */
-  transition:0.5s; /* A 1 second transition. */
+* {
+  box-sizing: border-box;
 }
-.reviewbody:hover > .hoverDescription {
-  opacity: 1;
-} 
-
+/* 
 .hoverInfo {
+  opacity:0;
+  transition:0.5s;
+ } */
+
+ /* .review-body:hover > .hoverInfo {
+  opacity: 1;
+}    */
+
+.hover-info {
   border-bottom: thin rgb(250, 247, 247);
   padding-top: 3px;
   padding-bottom: 3px;
@@ -17,40 +21,50 @@
   text-decoration: none;
 }
 
-.hoverInfo:link {
+.hover-info:link {
   color: #0073bb;
 }
 
-.hoverInfo:visited {
-  color: #466995;
-}
-
-.hoverInfo:hover { 
+.hover-info:hover { 
   text-decoration: underline;
   color: #0073bb;
 }
 
-.box:before {
-  content: " ";
+
+/*FORM*/
+.formbody::after {
+  content: "";
+  clear: both;
   display: table;
 }
-
-.box.after {
-  content: " ";
-  display: table; 
+.searchbar {
+  width: 30%;
+  float: left;
+  padding: 15px;
+  border: 1px solid red;
 }
-
-/* Style the search field */
+.selectYelp {
+  width: 17.5%;
+  float: left;
+  padding: 15px;
+  border: 1px solid red;
+}
+.selectLanguage {
+  width: 17.5%;
+  float: left;
+  padding: 15px;
+  border: 1px solid red;
+}
+  /* Style the search field */
 form.form input[type=text] {
   padding: 10px;
   font-size: 15px;
   border: 1px solid white;
   float: left;
-  width: 40%;
+  width: 70%;
   background: #f1f1f1;
 }
-
-/* Style the submit button */
+  /* Style the submit button */
 form.form button {
   float: left;
   padding: 10px;
@@ -70,24 +84,105 @@ form.form button:hover {
   display:inline-block;
   vertical-align: middle;
 }
+form.form select {
+  border: white;
+  color: rgb(100, 92, 92);
+  border-left: none; /* Prevent double borders */
+  font-size: 15px;
+  font-weight: bold;
+}
 
-.reviewName {
+/*OneDescription*/
+.profile-name {
   font-size: 17px;
   color: #0073bb;
   font-weight: bold;
 }
 
-.line {
-  border-bottom: thin solid #e6e6e6;
-  height: 320px;
-  padding-bottom: 20px;
-  padding-top: 20px;
+.review-sidebar {
+  width: 25%;
+  float: left;
+  padding: 15px;
+  border: 1px solid red;
 }
 
-.buttox {
-  height: 12px;
-  width: 12px
+.review-wrapper {
+  width: 40%;
+  float: left;
+  padding: 15px;
+  border: 1px solid red;
 }
-.button {
-  background-color: green;
+
+.review-body::after {
+  content: "";
+  clear: both;
+  display: table;
 }
+
+.profile-picture{
+  width: 40%;
+  float: left;
+  padding: 15px;
+  border: 1px solid red;
+}
+.profile-description{
+  width: 60%;
+  float: left;
+  padding: 15px;
+  border: 1px solid red;
+}
+
+.hover-description {
+  width: 100%;
+  float: left;
+  padding: 15px;
+  border: 1px solid red;
+}
+
+.hover-info {
+  border-bottom: thin solid #e6e6e6;
+}
+
+.review-comment {
+  float: left;
+  padding: 15px;
+  border: 1px solid red;
+}
+
+
+/*AJAXbuttons*/
+.buttonbody {
+  width: 75%;
+  float: left;
+  padding: 15px;
+  border: 1px solid red;
+}
+.buttonpress {
+  height: 16px;
+  width: 16px
+}
+.buttonresponse {
+  border: 1px solid red;
+}
+
+.buttonuseful {
+  width: 33%;
+  float: left;
+  padding: 5px;
+  border: 1px solid red;
+}
+
+.buttonfunny {
+  width: 33%;
+  float: left;
+  padding: 5px;
+  border: 1px solid red;
+}
+.buttoncool {
+  width: 33%;
+  float: left;
+  padding: 5px;
+  border: 1px solid red;
+}
+
+

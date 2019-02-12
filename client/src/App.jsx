@@ -2,21 +2,21 @@ import React from 'react';
 import reactDOM from 'react-dom';
 import reviews from '../dummyData.js';
 import Description from './Description.jsx';
-import HoverDescription from './HoverDescription.jsx'
+import FillerReview from './FillerReview.jsx';
 import Form from './Form.jsx';
 import $ from 'jquery';
 
 class App extends React.Component {
   constructor(props){
     super(props)
-
     this.state = {
-      reviews: reviews
+      reviews: []
     }
   }
 
   componentDidMount(){
-    $.get('/api/restaurant/1', (data)=>{
+    var endpoint = 2
+    $.get(`/api/restaurant/${endpoint}`, (data)=>{
       this.setState({
         reviews:data
       })
@@ -24,17 +24,18 @@ class App extends React.Component {
   }
 
   render(){
+
     return(
       <div>
         <h2><font color="#d32323">Recommended Reviews</font> for Straw</h2>
         <div>
-          <Form />
+          <Form/>
+        </div>
+        <div>
+          <FillerReview reviews={this.state.reviews}/>
         </div>
         <div>
           <Description reviews={this.state.reviews}/>
-        </div>
-        <div>
-          <HoverDescription reviews={this.state.reviews}/>
         </div>
       </div>
     )

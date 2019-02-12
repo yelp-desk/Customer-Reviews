@@ -15,9 +15,9 @@ The script will create the SQL queries required to insert the data into the data
 */
 
 var reviews = [];
-var count = 0;
 for (var i = 1; i <= 10; i++){
   var randomReviewsCount = Math.floor(Math.random() * 10) + 1; 
+  var randomRestaurant = faker.Company.companyName();
   for (var j = 1; j <= randomReviewsCount; j++){
     function randomDate(start, end) {
       var d = new Date(start.getTime() + Math.random() * (end.getTime() - start.getTime())),
@@ -33,7 +33,7 @@ for (var i = 1; i <= 10; i++){
 
     const data = {
       id: i,
-      restaurant: faker.Company.companyName(),
+      restaurant: randomRestaurant,
       name: faker.Name.firstName() + ' ' + faker.Name.lastName()[0] + '.',
       image: faker.Image.avatar(),
       location: faker.Address.city() +', ' + faker.Address.usState(),
@@ -44,13 +44,13 @@ for (var i = 1; i <= 10; i++){
       date: randomDate(new Date(2012, 0, 1), new Date()),
       text: faker.Lorem.paragraphs(),
       usefulCount: faker.random.number(20),
-      usefulToggle: false,
+      usefulToggle: 0,
       usefulColor: 'white',
       funnyCount: faker.random.number(20),
-      funnyToggle: false,
+      funnyToggle: 0,
       funnyColor:'white',
       coolCount: faker.random.number(20),
-      coolToggle: false,
+      coolToggle: 0,
       coolColor: 'white',
     };
  
@@ -58,7 +58,7 @@ for (var i = 1; i <= 10; i++){
     
   }  
 }
-
+console.log(reviews.length)
 for (var i = 0; i < reviews.length; i++){
   connection.query(`insert into reviews SET ?`, reviews[i])
 }

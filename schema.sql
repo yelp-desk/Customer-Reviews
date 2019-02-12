@@ -17,13 +17,13 @@ create table reviews (
   date varchar(10),
   text varchar(1250), 
   usefulCount int, 
-  usefulToggle boolean,
+  usefulToggle tinyint,
   usefulColor varchar(15),
   funnyCount int, 
-  funnyToggle boolean,
+  funnyToggle tinyint,
   funnyColor varchar(15),
   coolCount int,
-  coolToggle boolean,
+  coolToggle tinyint,
   coolColor varchar(15)
   );
 
