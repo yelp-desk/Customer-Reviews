@@ -3,7 +3,7 @@ import Description from './Description.jsx';
 class Form extends React.Component {
   constructor(props){
     super(props)
-    console.log('number of', this.props.review)
+    // console.log('number of', this.props.review)
     // need access to the number of reviews on the restaurant to display next to language
   }
 

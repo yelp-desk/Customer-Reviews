@@ -1,0 +1,154 @@
+* {
+  box-sizing: border-box;
+}
+
+
+/*fillerReview*/
+.fillerbody {
+  width: 65%;
+  float: left;
+  padding: 15px;
+  /* border: 1px solid red; */
+}
+.filler-image {
+  width: 35%;
+  float: left;
+  padding: 5px;
+  /* border: 1px solid red; */
+}
+.filler-image >img {
+  height:100px;
+  width: 200px;
+}
+
+.filler-reviewform {
+  width: 65%;
+  float: left;
+  padding: 15px;
+  background-color: rgb(230, 230, 230);
+
+  /* border: 1px solid red; */
+}
+
+.filler-background {
+  width: 90%;
+  height: 65px;
+  border-bottom: thin solid #524c4c;
+  /* border: 1px solid red; */
+  
+}
+.filler-initiate {
+  background-color: rgb(230, 230, 230);
+  width: 100%;
+  padding: 15px;
+  /* border: 1px solid red; */
+  text-align: center;
+}
+.filler-initiate-text {
+  font-size: 20px;
+  color: #0073bb;
+  
+}
+.filler-initiate-text:link {
+  color: #0073bb;
+}
+
+.filler-initiate-text:hover { 
+  cursor: pointer;
+  text-decoration: underline;
+  color: #0073bb;
+}
+
+.filler-body::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+input[type='radio'] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 25px;
+  height: 25px;
+  margin: 5px 0 5px 5px;
+  background-size: 225px 70px;
+  position: relative;
+  float: left;
+  display: inline;
+  top: 0;
+  border-radius: 3px;
+  z-index: 99999;
+  cursor: pointer;
+  box-shadow: 1px 1px 1px #000;
+}
+
+input[type='radio']:hover{
+  -webkit-filter: opacity(.4);
+  filter: opacity(.4);    
+}
+
+.one,.two,.three,.four,.five {
+  width: 10%;
+  float: left;
+  padding: 15px;
+  border: 1px solid gray;
+  cursor: pointer;
+  margin: 2px;
+}
+
+.one:hover{
+  background: rgb(220, 223, 62)
+}
+
+.two:hover{
+  background:  rgb(229, 233, 13)
+}
+
+.three:hover{
+  background:  rgb(219, 133, 35)
+}
+
+.four:hover{
+  background:  rgb(223, 94, 62)
+}
+
+.five:hover{
+  background:  rgb(240, 53, 6)
+}
+
+.one:hover ~ img{
+  -webkit-filter: opacity(.5) drop-shadow(0 0 0 red);
+  filter: opacity(.5) drop-shadow(0 0 0 red);
+}
+
+.two:hover ~ img{
+  -webkit-filter: opacity(.5) drop-shadow(0 0 0 green);
+  filter: opacity(.5) drop-shadow(0 0 0 green);
+}
+
+.three:hover ~ img{
+  -webkit-filter: opacity(.5) drop-shadow(0 0 0 yellow);
+  filter: opacity(.5) drop-shadow(0 0 0 yellow);
+}
+
+.four:hover ~ img{
+  -webkit-filter: opacity(.5) drop-shadow(0 0 0 purple);
+  filter: opacity(.5) drop-shadow(0 0 0 purple);
+}
+
+.five:hover ~ img{
+  -webkit-filter: opacity(.5) drop-shadow(0 0 0 pink);
+  filter: opacity(.5) drop-shadow(0 0 0 pink);
+}
+
+
+img.test{
+  width: 100px;
+  height: 100px;
+  position: relative;
+}
+
+::selection{
+  background: #000;
+}
+

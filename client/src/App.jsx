@@ -15,7 +15,8 @@ class App extends React.Component {
   }
 
   componentDidMount(){
-    var endpoint = 2
+    // var endpoint = Math.floor(Math.random() * 10) + 1; 
+    var endpoint = 1
     $.get(`/api/restaurant/${endpoint}`, (data)=>{
       this.setState({
         reviews:data
@@ -27,7 +28,7 @@ class App extends React.Component {
 
     return(
       <div>
-        <h2><font color="#d32323">Recommended Reviews</font> for Straw</h2>
+        <h2 className="header"><font color="#d32323">Recommended Reviews</font> for Straw</h2>
         <div>
           <Form/>
         </div>

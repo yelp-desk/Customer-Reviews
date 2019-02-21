@@ -2,7 +2,6 @@ const express = require('express')
 const app = express();
 const bodyparser = require('body-parser');
 const connect = require('../database/db.js')
-// const path = require('path')
 
 app.use(express.static(__dirname + '/../client/dist'))
 app.use(bodyparser.json())
@@ -22,26 +21,25 @@ app.get(`/api/restaurant/:id`, (req,res)=>{
   })
 });
 
-// app.post('/endpoint', (error,data));
-
 app.put('/api/restaurant/:id',(req,res)=>{
-  
   var name = req.body.name
-  var data = [req.body.usefulCount,req.body.usefulToggle,req.body.usefulColor]
+  var data = [
+    req.body[`${req.body.argument}Count`],
+    req.body[`${req.body.argument}Toggle`],
+    req.body[`${req.body.argument}Color`]
+  ]
   var id = req.params.id;
-  connect.putdb(id, data, name, (error)=>{
-    if (error){
-      res.status(400).send();
-    }
-    else {
-      console.log(data)
-      res.status(200).send();
-    }
+  var argument = req.body.argument;
 
+    connect.putdb(id, data, name, argument, (error)=>{
+      if (error){
+        res.status(400).send();
+      }
+      else {
+        res.status(200).send();
+      }
+    })
   })
-})
-
-
 
 app.listen(3004)
 console.log(`listening on port ${3004}`)

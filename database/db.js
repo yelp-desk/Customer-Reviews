@@ -9,7 +9,7 @@ var connection = mysql.createConnection({
 connection.connect();
 
 const getdb = (restaurantId, callback)=>{
-  connection.query(`select * from reviews where id=${restaurantId}`, function (error, results, fields) {
+  connection.query(`select * from reviews where id=${restaurantId}`, function (error, results) {
     if (error){
       callback(error)
     } else {
@@ -18,18 +18,8 @@ const getdb = (restaurantId, callback)=>{
   });
 }
 
-const postdb = (data, callback)=>{
-  connection.query(insert, function (error, results, fields) {
-    if (error){
-      callback(error)
-    } else {
-      callback(null, results)
-    }
-  });
-}
-
-const putdb = (restaurantId, data, name, callback)=>{
-  connection.query(`UPDATE reviews SET usefulCount = ?, usefulToggle = ?, usefulColor = ? WHERE id = ${restaurantId} && name="${name}"`, data, function (error, results, fields) {
+const putdb = (restaurantId, data, name, argument, callback)=>{
+  connection.query(`UPDATE reviews SET ${argument}Count = ?, ${argument}Toggle = ?, ${argument}Color = ? WHERE id = ${restaurantId} && name="${name}"`, data, function (error, results) {
     if (error){
       callback(error)
     } else {
@@ -39,5 +29,5 @@ const putdb = (restaurantId, data, name, callback)=>{
 }
 
 module.exports = {
-  getdb, postdb, putdb
+  getdb, putdb
 }
