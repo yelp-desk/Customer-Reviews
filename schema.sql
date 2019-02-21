@@ -15,7 +15,7 @@ create table reviews (
   photoCount int, 
   starsCount int,
   date varchar(10),
-  text varchar(1250), 
+  text varchar(2550), 
   usefulCount int, 
   usefulToggle tinyint,
   usefulColor varchar(15),

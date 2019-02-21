@@ -1,0 +1,71 @@
+* {
+  box-sizing: border-box;
+}
+
+
+/*FORM*/
+.formbody {
+  width: 65%;
+  float: left;
+  padding: 15px;
+
+}
+.formbody::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.searchbar {
+  width: 50%;
+  float: left;
+  /* border: 1px solid red; */
+}
+.selectYelp {
+  width: 25%;
+  float: left;
+  padding: 15px;
+  /* border: 1px solid red; */
+}
+.selectLanguage {
+  width: 25%;
+  float: left;
+  padding: 15px;
+  /* border: 1px solid red; */
+}
+  /* Style the search field */
+form.form input[type=text] {
+  padding: 10px;
+  font-size: 15px;
+  border: 1px solid white;
+  float: left;
+  width: 70%;
+  background: #f1f1f1;
+}
+  /* Style the submit button */
+form.form button {
+  float: left;
+  padding: 10px;
+  background: #d32323;
+  color: white;
+  font-size: 15px;
+  border: 1px solid grey;
+  border-left: none; /* Prevent double borders */
+  cursor: pointer;
+}
+
+form.form button:hover {
+  background: #d43535;
+}
+
+.icon {
+  display:inline-block;
+  vertical-align: middle;
+}
+form.form select {
+  border: white;
+  color: rgb(100, 92, 92);
+  border-left: none; /* Prevent double borders */
+  font-size: 15px;
+  font-weight: bold;
+}
+

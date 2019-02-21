@@ -1,0 +1,31 @@
+* {
+  box-sizing: border-box;
+}
+
+/*AJAXbuttons*/
+.buttonbody {
+  width: 75%;
+  float: left;
+  padding: 15px;
+  /* border: 1px solid red; */
+}
+.buttonpress {
+  height: 16px;
+  width: 16px
+}
+
+.buttonresponse {
+  font-weight: 500;
+  /* border: 1px solid red; */
+}
+
+.buttonuseful, .buttonfunny, .buttoncool {
+  width: 33%;
+  float: left;
+  padding: 5px;
+  /* border: 1px solid red; */
+}
+
+.buttonuseful > button , .buttonfunny > button , .buttoncool > button {
+  transition: 3s;
+}

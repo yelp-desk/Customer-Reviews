@@ -42,7 +42,7 @@ for (var i = 1; i <= 10; i++){
       photoCount: faker.random.number(100),
       starsCount: faker.random.number(5),
       date: randomDate(new Date(2012, 0, 1), new Date()),
-      text: faker.Lorem.paragraphs(),
+      text: faker.Lorem.paragraphs() + "\n\n" + faker.Lorem.paragraphs() ,
       usefulCount: faker.random.number(20),
       usefulToggle: 0,
       usefulColor: 'white',
