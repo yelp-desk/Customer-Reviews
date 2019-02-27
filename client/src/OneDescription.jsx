@@ -77,7 +77,7 @@ class OneDescription extends React.Component {
                 </div>
                 <div onClick={()=>this.showModal('fifth')} className="hover-info">
                   <div className="hover-info-pic"><img src={photosMedia[4]}/></div>
-                  <div className="hover-info-special"><a>Follow</a></div>
+                  <div className="hover-info-special"><a>Follow {this.props.review.name}</a></div>
                 </div>
                
               </div>

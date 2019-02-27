@@ -14,7 +14,6 @@ app.get(`/api/restaurant/:id`, (req,res)=>{
       console.log(error)
     }
     else {
-      console.log('success!')
       res.status(200).send(data);
     }
 

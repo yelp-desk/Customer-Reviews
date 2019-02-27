@@ -4,10 +4,12 @@ class Modal extends React.Component {
   constructor(props){
     super(props)
     this.state = {
-      name: 'this can\'t be empty',
-      email: 'this can\'t be empty',
-      to: 'this can\'t be empty',
-      optional: null
+      name: '',
+      email: '',
+      to: '',
+      optional: null,
+      error: '',
+      errorClass: 'hide-error'
     }
 
     this.handleChange = this.handleChange.bind(this)
@@ -24,17 +26,36 @@ handleChange(event){
 handleSubmit(event){
   event.preventDefault();
   var data = [this.state.name, this.state.email, this.state.to, this.state.optional]
+  console.log(data)
   this.validityCheck(data)
 }
 validityCheck(value){
-  console.log(value)
-  if (value[1].includes("@") && value[1].includes(".com")){
-    console.log("valid email");
-    this.props.handleClose('firstclassname')
+  if (value[0].length === 0){
+    this.setState({
+      errorClass: 'show-error',
+      error: 'The name you entered is invalid. Check the field highlighted below and try again.'
+    })
+  }
+  else if (!value[1].includes("@") && !value[1].includes(".com")) {
+    this.setState({
+      errorClass: 'show-error',
+      error: 'The email you entered is invalid. Check the field highlighted below and try again.'
+    })
+  }
+  else if (!value[2].includes("@") && !value[2].includes(".com")){
+    this.setState({
+      errorClass: 'show-error',
+      error: 'The \'To\' field is empty'
+    })
   }
   else {
-    console.log("invalid email")
+    this.setState({
+      errorClass: 'show-success',
+      error: 'Cool. Successfully Shared'
+    })
+    setTimeout(()=>this.props.handleClose('firstclassname'),3000)
   }
+
 }
 
 render(){
@@ -46,6 +67,10 @@ render(){
           <div>
             <h2>Share Review</h2>
             <button onClick={()=>this.props.handleClose('firstclassname')}>X</button>
+          </div>
+
+          <div className={this.state.errorClass}>
+            {this.state.error}
           </div>
 
           <div>

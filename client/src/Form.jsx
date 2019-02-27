@@ -1,5 +1,4 @@
 import React from 'react'
-import Description from './Description.jsx';
 class Form extends React.Component {
   constructor(props){
     super(props)
@@ -9,36 +8,33 @@ class Form extends React.Component {
 
   render(){
     return(
-      <div className="formbody">
-
-        <form className="form">
+      <form className="form">
+        
+        <div className="searchbar">
+          <input type="text" placeholder="Search within the reviews"/>
+          <button className="icon"> <img src="http://www.sclance.com/pngs/phone-icon-png-white/phone_icon_png_white_1016476.png" height="15" width="15"/></button>
+        </div>
           
-          <div className="searchbar">
-            <input type="text" placeholder="Search within the reviews"/>
-            <button className="icon"> <img src="http://www.sclance.com/pngs/phone-icon-png-white/phone_icon_png_white_1016476.png" height="15" width="15"/></button>
-          </div>
-           
-          <div className="selectYelp">
-            <select>
-              <option value="volvo">Yelp Sort</option>
-              <option value="saab">Newest First</option>
-              <option value="mercedes">Oldest First</option>
-              <option value="audi">Highest Rate</option>
-              <option value="audi">Lowest Rated</option>
-              <option value="audi">Elites</option>
-            </select>
-          </div>
+        <div className="selectYelp">
+          <select>
+            <option value="sort">Yelp Sort</option>
+            <option value="new">Newest First</option>
+            <option value="old">Oldest First</option>
+            <option value="high">Highest Rate</option>
+            <option value="low">Lowest Rated</option>
+            <option value="elites">Elites</option>
+          </select>
+        </div>
 
-          <div className="selectLanguage">
-            <select>
-              <option value="volvo">English</option>
-              <option value="saab">German</option>
-              <option value="mercedes">Dutch</option>
-            </select>
-          </div>
-        </form>
-
-      </div>
+        <div className="selectLanguage">
+          <select>
+            <option value="en">English ({this.props.reviewLength})</option>
+            <option value="gm">German</option>
+            <option value="du">Dutch</option>
+          </select>
+        </div>
+        
+      </form>
     )
   }
 }
