@@ -101,15 +101,7 @@ input[type='radio']:hover{
   background: rgb(223, 217, 134)
 }
 
-.one:hover + .two  {
-  background: rgb(223, 217, 134)
-}
-
-
 .two:hover {
-  background:  rgb(220, 210, 62)
-}
-.two:hover + .one {
   background:  rgb(220, 210, 62)
 }
 
@@ -277,7 +269,6 @@ input[type='radio']:hover{
 
 .five .tooltiptext {
   visibility: hidden;
-  width: 100px;
   background-color: black;
   color: #fff;
   text-align: center;
@@ -288,6 +279,7 @@ input[type='radio']:hover{
   bottom: 120%;
   left: 50%;
   margin-left: -50px;
+  width: 100px;
   font-size: 13px;
 }
 
