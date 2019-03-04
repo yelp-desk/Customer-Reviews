@@ -11,12 +11,28 @@ const FillerReview = (props) => {
         <div className="filler-reviewform">
 
           <div className="filler-background">
+
             <div className="filler-stars-container">
-              <div className='one' type='radio'> <img className="star" src="https://www.freeiconspng.com/uploads/white-star-icon-13.png" /></div>
-              <div className='two' type='radio'> <img className="star" src="https://www.freeiconspng.com/uploads/white-star-icon-13.png" /></div>
-              <div className='three' type='radio'> <img className="star" src="https://www.freeiconspng.com/uploads/white-star-icon-13.png" /></div>
-              <div className='four' type='radio'> <img className="star" src="https://www.freeiconspng.com/uploads/white-star-icon-13.png" /> </div>
-              <div className='five' type='radio'> <img className="star" src="https://www.freeiconspng.com/uploads/white-star-icon-13.png" /></div>  
+              <div className='one'> 
+                <img className="star" src="https://www.freeiconspng.com/uploads/white-star-icon-13.png" />
+                <span className="tooltiptext">Eek! Methinks not.</span>
+              </div>
+              <div className='two'> 
+                <img className="star" src="https://www.freeiconspng.com/uploads/white-star-icon-13.png" />
+                <span className="tooltiptext">Meh. I've experienced better.</span>
+              </div>
+              <div className='three'> 
+                <img className="star" src="https://www.freeiconspng.com/uploads/white-star-icon-13.png" />
+                <span className="tooltiptext">A-OK.</span>
+              </div>
+              <div className='four'> 
+                <img className="star" src="https://www.freeiconspng.com/uploads/white-star-icon-13.png" />
+                <span className="tooltiptext">Yay! I'm a fan.</span>
+              </div>
+              <div className='five'> 
+                <img className="star" src="https://www.freeiconspng.com/uploads/white-star-icon-13.png"/>
+                <span className="tooltiptext">Woohoo! As good as it gets!</span>
+              </div>  
             </div>
           </div>
 

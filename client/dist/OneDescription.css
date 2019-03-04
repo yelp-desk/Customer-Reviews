@@ -65,13 +65,13 @@
 }
 
 
-/* .hover-info {
+.hover-info {
   opacity: 0;
   transition:0.5s;
 } 
-.review-body:hover > .hover-info {
+.review-body:hover .hover-info {
   opacity: 1;
-}    */
+}   
 
  
 .hover-description {
@@ -100,11 +100,12 @@
 .hover-info-pic {
   width: 10%;
   float: left;
+  padding: 3px;
 }
 .hover-info-special {
   width: 75%;
   float: left;
-  padding: 1px;
+  padding: 3px;
   border-bottom: thin solid #6d6a6a;
 }
 

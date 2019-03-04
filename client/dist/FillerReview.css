@@ -8,7 +8,6 @@
   float: left;
   padding: 15px;
   border-bottom: thin solid #e6e6e6;
-
   /* border: 1px solid red; */
 }
 .filler-image {
@@ -53,22 +52,12 @@
   font-size: 20px;
   color: #0073bb;
 }
-.filler-initiate-text:link {
-  color: #0073bb;
-}
-
 .filler-initiate-text:hover { 
   cursor: pointer;
   text-decoration: underline;
   color: #0073bb;
 }
-
-.filler-body::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-
+/* 
 input[type='radio'] {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -84,26 +73,16 @@ input[type='radio'] {
   box-shadow: 1px 1px 1px #000;
 }
 
-/* input[type='radio']:hover{
+input[type='radio']:hover{
   -webkit-filter: opacity(.4);
   filter: opacity(.4);    
 } */
 
 /*positioning*/
-.one > img {
+.star {
   transform: translate(-50%, -50%);
-}
-.two > img {
-  transform: translate(-50%, -50%);
-}
-.three > img {
-  transform: translate(-50%, -50%);
-}
-.four > img {
-  transform: translate(-50%, -50%);
-}
-.five > img {
-  transform: translate(-50%, -50%);
+  width: 25px;
+  height: 25px;
 }
 
 .one,.two,.three,.four,.five {
@@ -118,19 +97,20 @@ input[type='radio'] {
   border-radius: 5px;
 }
 
-.one:hover {
-  background: rgb(226, 158, 116)
-}
-.one:hover + .two{
-  background:  rgb(226, 158, 116)
+.one:hover  {
+  background: rgb(223, 217, 134)
 }
 
-.one:hover + .four{
-  background:  rgb(226, 158, 116)
+.one:hover + .two  {
+  background: rgb(223, 217, 134)
 }
+
 
 .two:hover {
-  background:  rgb(220, 123, 62)
+  background:  rgb(220, 210, 62)
+}
+.two:hover + .one {
+  background:  rgb(220, 210, 62)
 }
 
 .three:hover{
@@ -145,36 +125,183 @@ input[type='radio'] {
   background:  rgb(240, 53, 6)
 }
 
-/* .one:hover ~ img{
-  -webkit-filter: opacity(.5) drop-shadow(0 0 0 red);
-  filter: opacity(.5) drop-shadow(0 0 0 red);
+/*tooltip*/
+.one {
+  position: relative;
+  display: inline-block;
 }
 
-.two:hover ~ img{
-  -webkit-filter: opacity(.5) drop-shadow(0 0 0 green);
-  filter: opacity(.5) drop-shadow(0 0 0 green);
+.one .tooltiptext {
+  visibility: hidden;
+  width: 100px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 120%;
+  left: 50%;
+  margin-left: -50px;
+  font-size: 13px;
 }
 
-.three:hover ~ img{
-  -webkit-filter: opacity(.5) drop-shadow(0 0 0 yellow);
-  filter: opacity(.5) drop-shadow(0 0 0 yellow);
+.one .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: black transparent transparent transparent;
 }
 
-.four:hover ~ img{
-  -webkit-filter: opacity(.5) drop-shadow(0 0 0 purple);
-  filter: opacity(.5) drop-shadow(0 0 0 purple);
+.one:hover .tooltiptext {
+  visibility: visible;
 }
 
-.five:hover ~ img{
-  -webkit-filter: opacity(.5) drop-shadow(0 0 0 pink);
-  filter: opacity(.5) drop-shadow(0 0 0 pink);
-} */
-
-img.star {
-  width: 25px;
-  height: 25px;
+.two {
+  position: relative;
+  display: inline-block;
 }
-/* 
-::selection{
-  background: #000;
-} */
+
+.two .tooltiptext {
+  visibility: hidden;
+  width: 100px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 120%;
+  left: 50%;
+  margin-left: -50px;
+  font-size: 13px;
+}
+
+.two .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: black transparent transparent transparent;
+}
+
+.two:hover .tooltiptext {
+  visibility: visible;
+}
+
+.three {
+  position: relative;
+  display: inline-block;
+}
+
+.three .tooltiptext {
+  visibility: hidden;
+  width: 100px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 120%;
+  left: 50%;
+  margin-left: -50px;
+  font-size: 13px;
+}
+
+.three .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: black transparent transparent transparent;
+}
+
+.three:hover .tooltiptext {
+  visibility: visible;
+}
+
+.four {
+  position: relative;
+  display: inline-block;
+}
+
+.four .tooltiptext {
+  visibility: hidden;
+  width: 100px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 120%;
+  left: 50%;
+  margin-left: -50px;
+  font-size: 13px;
+}
+
+.four .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: black transparent transparent transparent;
+}
+
+.four:hover .tooltiptext {
+  visibility: visible;
+}
+
+.five {
+  position: relative;
+  display: inline-block;
+}
+
+.five .tooltiptext {
+  visibility: hidden;
+  width: 100px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 120%;
+  left: 50%;
+  margin-left: -50px;
+  font-size: 13px;
+}
+
+.five .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: black transparent transparent transparent;
+}
+
+.five:hover .tooltiptext {
+  visibility: visible;
+}
