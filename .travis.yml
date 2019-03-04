@@ -3,10 +3,10 @@ services:
   - docker
 
 before_install:
-  - docker build -t alvintan626/Customer-Reviews -f Dockerfile.dev .
+  - docker build -t yum-eats/Customer-Reviews -f Dockerfile.dev .
 
 script:
-  - docker run alvintan626/Customer-Reviews npm run test -- --coverage
+  - docker run yum-eats/Customer-Reviews npm run test -- --coverage
 
 deploy:
   provider: elasticbeanstalk
@@ -17,4 +17,6 @@ deploy:
   bucket_path: "Customer-Reviews"
   on: 
     branch: master
-    
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key:
+    secure: "$AWS_SECRET_KEY"
