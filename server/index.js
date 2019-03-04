@@ -14,7 +14,6 @@ app.get(`/api/restaurant/:id`, (req,res)=>{
       console.log(error)
     }
     else {
-      console.log('success!')
       res.status(200).send(data);
     }
 
@@ -26,7 +25,8 @@ app.put('/api/restaurant/:id',(req,res)=>{
   var data = [
     req.body[`${req.body.argument}Count`],
     req.body[`${req.body.argument}Toggle`],
-    req.body[`${req.body.argument}Color`]
+    req.body[`${req.body.argument}BackgroundColor`],
+    req.body[`${req.body.argument}FontColor`]
   ]
   var id = req.params.id;
   var argument = req.body.argument;

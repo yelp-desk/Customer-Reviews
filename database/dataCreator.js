@@ -45,13 +45,16 @@ for (var i = 1; i <= 10; i++){
       text: faker.Lorem.paragraphs() + "\n\n" + faker.Lorem.paragraphs() ,
       usefulCount: faker.random.number(20),
       usefulToggle: 0,
-      usefulColor: 'white',
+      usefulBackgroundColor: 'white',
+      usefulFontColor: 'black',
       funnyCount: faker.random.number(20),
       funnyToggle: 0,
-      funnyColor:'white',
+      funnyBackgroundColor:'white',
+      funnyFontColor: 'black',
       coolCount: faker.random.number(20),
       coolToggle: 0,
-      coolColor: 'white',
+      coolBackgroundColor: 'white',
+      coolFontColor: 'black'
     };
  
     reviews.push(data)

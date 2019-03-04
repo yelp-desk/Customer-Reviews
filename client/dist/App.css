@@ -1,0 +1,18 @@
+* {
+  box-sizing: border-box;
+}
+
+.header {
+  font-size: 25px;
+  float: left;
+  width: 51%;
+  padding-left: 16px;
+  padding-bottom: 5px;
+  font-style: unset
+  /* border: 1px solid red; */
+
+}
+div > font {
+  font-weight: 600;
+  color: #d32323;
+}

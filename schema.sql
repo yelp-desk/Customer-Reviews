@@ -18,13 +18,16 @@ create table reviews (
   text varchar(2550), 
   usefulCount int, 
   usefulToggle tinyint,
-  usefulColor varchar(15),
+  usefulBackgroundColor varchar(15),
+  usefulFontColor varchar(15),
   funnyCount int, 
   funnyToggle tinyint,
-  funnyColor varchar(15),
+  funnyBackgroundColor varchar(15),
+  funnyFontColor varchar(15),
   coolCount int,
   coolToggle tinyint,
-  coolColor varchar(15)
+  coolBackgroundColor varchar(15),
+  coolFontColor varchar(15)
   );
 
 describe reviews;
