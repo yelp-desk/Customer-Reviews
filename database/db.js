@@ -19,7 +19,7 @@ const getdb = (restaurantId, callback)=>{
 }
 
 const putdb = (restaurantId, data, name, argument, callback)=>{
-  connection.query(`UPDATE reviews SET ${argument}Count = ?, ${argument}Toggle = ?, ${argument}Color = ? WHERE id = ${restaurantId} && name="${name}"`, data, function (error, results) {
+  connection.query(`UPDATE reviews SET ${argument}Count = ?, ${argument}Toggle = ?, ${argument}BackgroundColor = ?, ${argument}FontColor = ? WHERE id = ${restaurantId} && name="${name}"`, data, function (error, results) {
     if (error){
       callback(error)
     } else {
