@@ -1,0 +1,9 @@
+sudo: required
+services:
+  - docker
+
+before_install:
+  - docker build -t alvintan626/Customer-Reviews -f Dockerfile.dev .
+
+script:
+  - docker run alvintan626/Customer-Reviews npm run test -- --coverage
