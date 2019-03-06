@@ -28,7 +28,6 @@ connection.connect(function(err) {
 });
 
 
-
 var faker = require('faker');
 /*
 A seed script is a script that generates dummy data, possibly using random values or a look up table of acceptable values. 

@@ -7,6 +7,10 @@ app.use(express.static(__dirname + '/../client/dist'))
 app.use(bodyparser.json())
 app.use(bodyparser.urlencoded({extended:false}))
 
+app.get('/', (req,res)=>{
+  res.send("hi there");
+})
+
 app.get(`/api/restaurant/:id`, (req,res)=>{
   var ok = req.params.id
   connect.getdb(ok, (error,data)=>{
@@ -16,7 +20,6 @@ app.get(`/api/restaurant/:id`, (req,res)=>{
     else {
       res.status(200).send(data);
     }
-
   })
 });
 
