@@ -5,6 +5,16 @@ class AjaxButtons extends React.Component {
   constructor(props){
     super(props)
 
+    if (this.props.review.usefulCount === 0){
+      this.props.review.usefulCount = null
+    } 
+    if (this.props.review.funnyCount === 0){
+      this.props.review.funnyCount = null
+    } 
+    if (this.props.review.coolCount === 0){
+      this.props.review.coolCount = null
+    } 
+    
     this.state = {
       usefulCount: this.props.review.usefulCount,
       funnyCount: this.props.review.funnyCount,
@@ -70,7 +80,10 @@ class AjaxButtons extends React.Component {
       })
       .then((response)=>{
         var format = JSON.parse(response.config.data)
-          console.log('toggle off',format)
+        console.log('toggle off',format)
+        if (format.usefulCount === 0){
+          format.usefulCount = null
+        } 
         this.setState({
           usefulCount: format.usefulCount,
           usefulBackgroundColor: format.usefulBackgroundColor,
@@ -123,7 +136,10 @@ class AjaxButtons extends React.Component {
       })
       .then((response)=>{
         var format = JSON.parse(response.config.data)
-          console.log('toggle off',format)
+        console.log('toggle off',format)
+        if (format.funnyCount === 0){
+          format.funnyCount = null
+        } 
         this.setState({
           funnyCount: format.funnyCount,
           funnyBackgroundColor: format.funnyBackgroundColor,
@@ -177,6 +193,9 @@ class AjaxButtons extends React.Component {
       .then((response)=>{
         var format = JSON.parse(response.config.data)
           console.log('toggle off',format)
+          if (format.coolCount === 0){
+            format.coolCount = null
+          } 
         this.setState({
           coolCount: format.coolCount,
           coolBackgroundColor: format.coolBackgroundColor,

@@ -1,12 +1,29 @@
 var mysql      = require('mysql');
-var connection = mysql.createConnection({
-  host     : 'localhost',
-  user     : 'root',
-  password : 'student',
-  database : 'yelp'
-});
+// var connection = mysql.createConnection({
+//   host     : 'localhost',
+//   user     : 'root',
+//   password : 'student',
+//   database : 'yelp'
+// });
  
-connection.connect();
+// connection.connect();
+
+var connection = mysql.createConnection({
+  host     : 'aa10hn2oqnez18.czfipm1dwzy0.us-west-1.rds.amazonaws.com',
+  user     : 'alvintan626',
+  password : '00aaTT!!',
+  port     : 3306
+});
+
+connection.connect(function(err) {
+  if (err) {
+    console.error('Database connection failed: ' + err.stack);
+    return;
+  }
+
+  console.log('Connected to database.');
+});
+
 
 const getdb = (restaurantId, callback)=>{
   connection.query(`select * from reviews where id=${restaurantId}`, function (error, results) {
@@ -31,3 +48,4 @@ const putdb = (restaurantId, data, name, argument, callback)=>{
 module.exports = {
   getdb, putdb
 }
+

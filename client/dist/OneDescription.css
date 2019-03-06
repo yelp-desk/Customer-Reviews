@@ -106,7 +106,7 @@
   width: 75%;
   float: left;
   padding: 3px;
-  border-bottom: thin solid #6d6a6a;
+  border-bottom: thin solid #e6e6e6;
 }
 
 .hover-info::after {

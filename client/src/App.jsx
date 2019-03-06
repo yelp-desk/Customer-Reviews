@@ -16,12 +16,13 @@ class App extends React.Component {
   }
 
   componentDidMount(){
-    var endpoint = Math.floor(Math.random() * 8) + 1; 
+    // var endpoint = Math.floor(Math.random() * 8) + 1; 
+    var endpoint = 4;
     console.log(endpoint)
     $.get(`/api/restaurant/${endpoint}`, (data)=>{
       this.setState({
         reviews:data,
-        restaurant: data[1].restaurant,
+        restaurant: data[0].restaurant,
         reviewLength: data.length
 
       })
