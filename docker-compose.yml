@@ -23,8 +23,8 @@ services:
       dockerfile: Dockerfile.dev
       context: ./nginx
     ports:
-      -'3004:80'
-      
+      - 3004:80
+
   client:
     build:
       dockerfile: Dockerfile.dev
