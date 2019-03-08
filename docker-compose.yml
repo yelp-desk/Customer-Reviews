@@ -5,7 +5,11 @@ services:
     command: --default-authentication-plugin=mysql_native_password
     restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: example
+      RDS_HOSTNAME: aa10hn2oqnez18.czfipm1dwzy0.us-west-1.rds.amazonaws.com
+      RDS_PORT: 3306
+      RDS_DB_NAME: yelp
+      RDS_USERNAME: alvintan626
+      RDS_PASSWORD: studentstudent 
 
   adminer:
     image: adminer
@@ -13,7 +17,23 @@ services:
     ports:
       - 3004:3004
 
-  server:
+  nginx:
+    restart: always
+    build:
+      dockerfile: Dockerfile.dev
+      context: ./nginx
+    ports:
+      -'3004:80'
+      
+  client:
+    build:
+      dockerfile: Dockerfile.dev
+      context: ./client
+    volumes:
+      - /app/node_modules
+      - ./client:/app
+
+  api:
     build:
       dockerfile: Dockerfile.dev
       context: ./server
@@ -21,8 +41,8 @@ services:
       - /app/node_modules
       - ./server:/app
     environment:
-      
-  # node-app:
-  #   build: .
-  #   ports: 
-  #     -"3004:3004"
+      RDS_HOSTNAME: aa10hn2oqnez18.czfipm1dwzy0.us-west-1.rds.amazonaws.com
+      RDS_PORT: 3306
+      RDS_DB_NAME: yelp
+      RDS_USERNAME: alvintan626
+      RDS_PASSWORD: studentstudent 
