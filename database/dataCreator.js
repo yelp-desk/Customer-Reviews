@@ -1,5 +1,4 @@
 var mysql      = require('mysql');
-
 // var connection = mysql.createConnection({
 //   host     : 'localhost',
 //   user     : 'root',
@@ -9,12 +8,10 @@ var mysql      = require('mysql');
  
 // connection.connect();
 
-
-//rds db name =  aa10hn2oqnez18
 var connection = mysql.createConnection({
   host     : 'aa10hn2oqnez18.czfipm1dwzy0.us-west-1.rds.amazonaws.com',
   user     : 'alvintan626',
-  password : '00aaTT!!',
+  password : 'studentstudent',
   port     : 3306
 });
 

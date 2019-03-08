@@ -8,6 +8,8 @@ app.use(bodyparser.json())
 app.use(bodyparser.urlencoded({extended:false}))
 
 app.get('/', (req,res)=>{
+  // process.exit(0)
+  console.log('hi')
   res.send("hi there");
 })
 
