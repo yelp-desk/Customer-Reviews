@@ -2,6 +2,10 @@
 
 > Yum-eats
 
+# Description
+
+> A capstone project imitation of the website Yelp. This portion is specifically the reviews section. Includes the use of NodeJS to bridge the relation between MySql database and browswer render component, React. This MVC system is implemented for academic purposes only and built from scratch.
+
 ## Related Projects
 
   - https://github.com/yum-eats/jumbo-card
