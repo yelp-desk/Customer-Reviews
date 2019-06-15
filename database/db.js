@@ -1,28 +1,28 @@
 var mysql      = require('mysql');
-// var connection = mysql.createConnection({
-//   host     : 'localhost',
-//   user     : 'root',
-//   password : 'student',
-//   database : 'yelp'
-// });
- 
-// connection.connect();
-
 var connection = mysql.createConnection({
-  host     : 'aa10hn2oqnez18.czfipm1dwzy0.us-west-1.rds.amazonaws.com',
-  user     : 'alvintan626',
-  password : 'studentstudent',
-  port     : 3306
+  host     : 'localhost',
+  user     : 'root',
+  password : 'student',
+  database : 'yelp'
 });
+ 
+connection.connect();
 
-connection.connect(function(err) {
-  if (err) {
-    console.error('Database connection failed: ' + err.stack);
-    return;
-  }
+// var connection = mysql.createConnection({
+//   host     : 'aa10hn2oqnez18.czfipm1dwzy0.us-west-1.rds.amazonaws.com',
+//   user     : 'alvintan626',
+//   password : 'studentstudent',
+//   port     : 3306
+// });
 
-  console.log('Connected to database.');
-});
+// connection.connect(function(err) {
+//   if (err) {
+//     console.error('Database connection failed: ' + err.stack);
+//     return;
+//   }
+
+//   console.log('Connected to database.');
+// });
 
 
 const getdb = (restaurantId, callback)=>{

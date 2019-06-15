@@ -1,28 +1,28 @@
 var mysql      = require('mysql');
-// var connection = mysql.createConnection({
-//   host     : 'localhost',
-//   user     : 'root',
-//   password : 'student',
-//   database : 'yelp'
-// });
- 
-// connection.connect();
-
 var connection = mysql.createConnection({
-  host     : 'aa10hn2oqnez18.czfipm1dwzy0.us-west-1.rds.amazonaws.com',
-  user     : 'alvintan626',
-  password : 'studentstudent',
-  port     : 3306
+  host     : 'localhost',
+  user     : 'root',
+  password : 'student',
+  database : 'yelp'
 });
+ 
+connection.connect();
 
-connection.connect(function(err) {
-  if (err) {
-    console.error('Database connection failed: ' + err.stack);
-    return;
-  }
+// var connection = mysql.createConnection({
+//   host     : 'aa10hn2oqnez18.czfipm1dwzy0.us-west-1.rds.amazonaws.com',
+//   user     : 'alvintan626',
+//   password : 'studentstudent',
+//   port     : 3306
+// });
 
-  console.log('Connected to database.');
-});
+// connection.connect(function(err) {
+//   if (err) {
+//     console.error('Database connection failed: ' + err.stack);
+//     return;
+//   }
+
+//   console.log('Connected to database.');
+// });
 
 
 var faker = require('faker');
@@ -36,12 +36,10 @@ The script will create the SQL queries required to insert the data into the data
 // for SDC generating async records of > 10000000 data
 // a regular for loop itself will break or so
 
-//take a look at seeding scripts
-
 var reviews = [];
 for (var i = 1; i <= 10; i++){
   var randomReviewsCount = Math.floor(Math.random() * 10) + 1; 
-  var randomRestaurant = faker.Company.companyName();
+  var randomRestaurant = faker.company.companyName();
   for (var j = 1; j <= randomReviewsCount; j++){
     function randomDate(start, end) {
       var d = new Date(start.getTime() + Math.random() * (end.getTime() - start.getTime())),
@@ -58,15 +56,15 @@ for (var i = 1; i <= 10; i++){
     const data = {
       id: i,
       restaurant: randomRestaurant,
-      name: faker.Name.firstName() + ' ' + faker.Name.lastName()[0] + '.',
-      image: faker.Image.avatar(),
-      location: faker.Address.city() +', ' + faker.Address.usState(),
+      name: faker.name.firstName() + ' ' + faker.name.lastName()[0] + '.',
+      image: faker.image.avatar(),
+      location: faker.address.city() +', ' + faker.address.state(),
       friendCount: faker.random.number(100),
       reviewsCount: faker.random.number(100),
       photoCount: faker.random.number(100),
       starsCount: Math.floor(Math.random() * 5) + 1,
       date: randomDate(new Date(2012, 0, 1), new Date()),
-      text: faker.Lorem.paragraphs() + "\n\n" + faker.Lorem.paragraphs() ,
+      text: faker.lorem.paragraphs() + "\n\n" + faker.lorem.paragraphs() ,
       usefulCount: faker.random.number(20),
       usefulToggle: 0,
       usefulBackgroundColor: 'white',

@@ -1,14 +1,14 @@
 import React from 'react';
 import Form from './Form.jsx';
-import OneDescription from './OneDescription.jsx';
+import ReviewBodyPiece from './ReviewBodyPiece.jsx';
 import FillerReview from './FillerReview.jsx';
 
-const Description = (props)=>{
+const ReviewBody = (props)=>{
   return(
     <div>
       <div className="line">
         {props.reviews.map((review)=>(
-          <OneDescription review={review}/>
+          <ReviewBodyPiece review={review}/>
         ))}
       </div>
       {/* <div>
@@ -26,4 +26,4 @@ const Description = (props)=>{
 
 }
 
-export default Description;
+export default ReviewBody;

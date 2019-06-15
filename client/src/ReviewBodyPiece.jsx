@@ -1,9 +1,9 @@
 import React from 'react';
 import AjaxButtons from './AjaxButtons.jsx'
-import Modal from './Modal.jsx'
-import {photosReview,photosProfile,photosMedia} from './OneDescriptionPhotos.js'
+import Modals from './Modals.jsx'
+import {photosReview,photosProfile,photosMedia} from './ReviewBodyPiecePhotos.js'
 
-class OneDescription extends React.Component {
+class ReviewBodyPiece extends React.Component {
   constructor(props){
     super(props)
     this.state = {
@@ -51,13 +51,13 @@ class OneDescription extends React.Component {
 
             <div className="hover-box">
               <div className="hover-description">
-                  <Modal show={this.state.show} handleClose={this.hideModal} 
+                  <Modals show={this.state.show} handleClose={this.hideModal} 
                     firstclassname={this.state.firstclassname}
                     secondclassname={this.state.secondclassname}
                     thirdclassname={this.state.thirdclassname}
                     fourthclassname={this.state.fourthclassname}
                     fifthclassname={this.state.fifthclassname}>
-                  </Modal>
+                  </Modals>
 
                 <div onClick={()=>this.showModal('first')} className="hover-info">
                   <div className="hover-info-pic"><img src={photosMedia[0]}/></div>
@@ -104,5 +104,5 @@ class OneDescription extends React.Component {
   }
 }
 
-export default OneDescription;
+export default ReviewBodyPiece;
 

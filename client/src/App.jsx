@@ -1,6 +1,6 @@
 import React from 'react';
 import reactDOM from 'react-dom';
-import Description from './Description.jsx';
+import ReviewBody from './ReviewBody.jsx';
 import FillerReview from './FillerReview.jsx';
 import Form from './Form.jsx';
 import $ from 'jquery';
@@ -42,7 +42,7 @@ class App extends React.Component {
           <FillerReview reviews={this.state.reviews} restaurant={this.state.restaurant}/>
         </div>
         <div>
-          <Description reviews={this.state.reviews}/>
+          <ReviewBody reviews={this.state.reviews}/>
         </div>
       </div>
     )

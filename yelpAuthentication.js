@@ -1,0 +1,3 @@
+export const key = 'FhKSIVriLQy3Gi4tJXNXp0vlD6DPo_m8KT6bsvO0zkD8YWF9vFjVUGDJADzVOoQkjA6LRWyaHdU0-otTxW4F416Ijxix43p3VikuE3x0jhNJYuzHWVpICZUBLlgEXXYx'
+
+export const clientID = 'cQ0oRl8zgQlatSqJh5Sjog'

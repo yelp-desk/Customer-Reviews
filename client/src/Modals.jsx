@@ -1,7 +1,7 @@
 import React from 'react';
 import FirstModal from './FirstModal.jsx'
 
-class Modal extends React.Component {
+class Modals extends React.Component {
   constructor(props){
     super(props)
     
@@ -15,9 +15,6 @@ render(){
           <FirstModal handleClose={this.props.handleClose}/>
         </section>
       </div>
-
-
-
 
       <div className={this.props.secondclassname}>
         <section className="modal-main">
@@ -56,4 +53,4 @@ render(){
 }
 
 
-export default Modal;
+export default Modals;
